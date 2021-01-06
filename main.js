@@ -4,26 +4,20 @@ document.addEventListener('DOMContentLoaded', ()=> {
     let inputValue = 1
     input.setAttribute('value', inputValue)
     
-    function plusOutput() {
-        inputValue = parseInt(input.value)
-        outputValue = outputValue + inputValue
-        checkIfRed()
-        output.innerText = outputValue
-    }
-    
     function minusOutput() {
         inputValue = parseInt(input.value) * -1
-        outputValue = outputValue + inputValue
-        checkIfRed()
-        output.innerText = outputValue
+        changeOutput()
     }
     
-    function checkIfRed() {
-        if (outputValue < 0) {
-            output.style.color = 'red'
-        } else {
-            output.style.color = 'black'
-        }
+    function plusOutput() {
+        inputValue = parseInt(input.value)
+        changeOutput()
+    }
+    
+    function changeOutput() {
+        outputValue = outputValue + inputValue
+        output.style.color = (outputValue < 0 ) ? 'red' : 'black'
+        output.innerText = outputValue
     }
     
     plus.addEventListener('click', plusOutput)
