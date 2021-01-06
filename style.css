@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#output {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
+    font-size: 80px;
+}
+
+#controller {
+    display: flex;
+    padding: 10px;
+}
+
+input {
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 80px;
+    width: 160px;
+}
+
+button {
+    width: 100px;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 80px;
+}
+
+button:hover {
+    background-color: white;
+    color: gray;
+}
